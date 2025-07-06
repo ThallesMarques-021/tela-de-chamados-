@@ -1,59 +1,102 @@
-# InsuranceChallange
+# 📞 Chamados App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Aplicação para gerenciamento de chamados com Angular + Material + Testes unitários.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Funcionalidades
+
+- ✅ Listagem de chamados com paginação
+- 🔎 Filtros reativos por ID, título, status e data
+- 📋 Criação e edição de chamados via modal
+- 🗑️ Exclusão com confirmação
+- 💬 Notificações com `MatSnackBar`
+- 🧪 Testes unitários com cobertura acima de 80%
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Camada       | Tecnologias                                                  |
+|--------------|---------------------------------------------------------------|
+| Frontend     | Angular 15+, TypeScript, RxJS, Angular Material               |
+| Estilização  | CSS + Angular Material                                        |
+| Testes       | Jasmine, Karma, HttpClientTestingModule                       |
+| Backend fake | JSON Server (para simular requisições HTTP)                   |
+
+---
+
+## ▶️ Como executar o projeto
+
+### 1. Instalar dependências
+
+```bash
+npm install
+```
+
+### 2. Rodar o backend simulado (JSON Server)
+
+Crie um arquivo `db.json` com o seguinte conteúdo:
+
+```json
+{
+  "calls": []
+}
+```
+
+E execute:
+
+```bash
+npx json-server --watch db.json --port 3000
+```
+
+### 3. Iniciar a aplicação Angular
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse em: [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧪 Rodar os testes com cobertura
 
 ```bash
-ng generate --help
+ng test --code-coverage
 ```
 
-## Building
+Relatório disponível em:
 
-To build the project run:
-
-```bash
-ng build
+```
+coverage/index.html
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📁 Estrutura de Pastas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+src/
+├── app/
+│   ├── core/
+│   │   ├── models/             # Modelos de dados (Call)
+│   │   └── services/           # Serviços como CallService, SnackService
+│   ├── pages/
+│   │   └── calls/
+│   │       ├── lista-chamado/  # Componente principal de listagem
+│   │       └── modal-chamados/ # Modal de criação/edição
+│   └── shared/
+│       └── confirm-dialog/     # Diálogo de confirmação reutilizável
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 📌 Detalhes técnicos
 
-```bash
-ng e2e
-```
+- Utiliza **Standalone Components** com `imports: [...]` no `@Component`
+- `FormGroup` reativo com `valueChanges` + `debounceTime`
+- `MatTableDataSource` com paginator e filtros customizados
+- Dialogs com retorno de `afterClosed()`
+- `HttpClientTestingModule` e spies com `jasmine.createSpyObj`
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
