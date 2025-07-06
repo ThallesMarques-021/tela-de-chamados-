@@ -1,0 +1,60 @@
+{
+  "calls": [
+    {
+      "id": "3389",
+      "title": "Monitor quebrado",
+      "description": "Trocar tela ",
+      "status": "Aberto",
+      "createdAt": "2025-07-04T21:46:31.529Z"
+    },
+    {
+      "id": "ecf7",
+      "title": "Mouse quebrado",
+      "description": "Lado esquerdo não funciona",
+      "status": "Aberto",
+      "createdAt": "2025-07-04T21:47:00.703Z"
+    },
+    {
+      "id": "a37e",
+      "title": "Notebook com probelma",
+      "description": "Parou de funcionar devido erro na tela ",
+      "status": "Aberto",
+      "createdAt": "2025-07-04T22:14:09.106Z"
+    },
+    {
+      "id": "284a",
+      "title": "Carregador do note não funciona",
+      "description": "ao ligar na tomada o mesmo não funciona..",
+      "status": "Fechado",
+      "createdAt": "2025-07-04T22:14:38.481Z"
+    },
+    {
+      "id": "d363",
+      "title": "Celular não liga",
+      "description": "Aparelho celular desligando e ligando ",
+      "status": "Em Andamento",
+      "createdAt": "2025-07-06T13:41:01.378Z"
+    },
+    {
+      "id": "5a01",
+      "title": "Teclado quebrado",
+      "description": "Teclado quebrado",
+      "status": "Aberto",
+      "createdAt": "2025-07-06T13:42:37.539Z"
+    },
+    {
+      "id": "648e",
+      "title": "Notebook Falhando",
+      "description": "Notebook apresentando falhas",
+      "status": "Aberto",
+      "createdAt": "2025-07-06T13:42:51.748Z"
+    },
+    {
+      "id": "fb90",
+      "title": "tela com problemas",
+      "description": "Tela quebrada",
+      "status": "Aberto",
+      "createdAt": "2025-07-06T13:46:39.330Z"
+    }
+  ]
+}

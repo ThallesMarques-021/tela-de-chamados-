@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>
+  {{ isEdit ? 'Editar Chamado #' + data?.id : 'Novo Chamado' }}
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="callForm" (ngSubmit)="save()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" />
+      <mat-error *ngIf="callForm.get('title')?.invalid">Obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+      <mat-error *ngIf="callForm.get('description')?.invalid">Obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="Aberto">Aberto</mat-option>
+        <mat-option value="Em Andamento">Em Andamento</mat-option>
+        <mat-option value="Fechado">Fechado</mat-option>
+      </mat-select>
+      <mat-error *ngIf="callForm.get('status')?.invalid">Obrigatório</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button type="button" (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" type="submit" [disabled]="callForm.invalid" (click)="save()">
+    {{ isEdit ? 'Salvar' : 'Criar' }}
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,69 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+  margin-bottom: 20px;
+}
+
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+mat-form-field {
+  flex: 1;
+  min-width: 220px;
+}
+
+table {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell, td.mat-cell {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+td.mat-cell button {
+  margin-right: 8px;
+}
+
+mat-paginator {
+  margin-top: 16px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+}
+
+button[mat-button], button[mat-raised-button] {
+  text-transform: none;
+  font-weight: 500;
+}
+
+.mat-option-text {
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 200px;
+}
+

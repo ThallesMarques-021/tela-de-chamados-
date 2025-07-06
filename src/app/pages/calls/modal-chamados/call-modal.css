@@ -1,0 +1,27 @@
+.full-width {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+mat-dialog-actions {
+  padding-top: 16px;
+}
+
+button[mat-button] {
+  border: 1px solid #f44336; 
+  color: #f44336;
+  font-weight: 500;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[mat-raised-button] {
+  border: 1px solid #0d2fc7; 
+  color: #1a48df;
+  font-weight: 500;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+
