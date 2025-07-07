@@ -49,14 +49,23 @@ E execute:
 ```bash
 npx json-server --watch db.json --port 3000
 ```
+(Caso ocorra erro no passo 2 , como informação a versão do Node.js deve ser maior que a 18)
 
 ### 3. Iniciar a aplicação Angular
 
 ```bash
 ng serve
 ```
+Erro:
+Ao executar o comando ng serve ,caso ocorra erro ou a mensagem similiar ('ng' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes)
 
-Acesse em: [http://localhost:4200](http://localhost:4200)
+Solução:
+Instale o Angular CLI globalmente: 
+npm install -g @angular/cli
+-------------
+
+Acesse em: [http://localhost:4200/calls]
 
 ---
 
